@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\yHR.Common\yHR.Common.csproj" />
+    <ProjectReference Include="..\yokir.Expenditure.Data.Access\yHR.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

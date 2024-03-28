@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BoldReports.Net.Core" Version="5.4.26" />
+    <PackageReference Include="Dapper" Version="2.1.28" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
+    <PackageReference Include="PDFsharp" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\yHR.Common\yHR.Common.csproj" />
+    <ProjectReference Include="..\yHR.Desktop.Controller\yHR.Desktop.Controller.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="dbAutoTrack.DataReports">
+      <HintPath>C:\dbAutoTrack\DataReports.NETv7.7.0.0\bin\DOTNET_Framework_6.0\dbAutoTrack.DataReports.dll</HintPath>
+    </Reference>
+    <Reference Include="dbAutoTrack.DataReports.Export">
+      <HintPath>C:\dbAutoTrack\DataReports.NETv7.7.0.0\bin\DOTNET_Framework_6.0\dbAutoTrack.DataReports.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="dbAutoTrack.DataReports.Web">
+      <HintPath>C:\dbAutoTrack\DataReports.NETv7.7.0.0\bin\DOTNET_Framework_6.0\dbAutoTrack.DataReports.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="yHrDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>yHrDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="yHrDataSet1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>yHrDataSet1.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="dbAutoTrack.DataReports.Design.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="dbAutoTrack.DataReports.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="dbAutoTrack.DataReports.Export.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="dbAutoTrack.DataReports.Viewer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="yHrDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yHrDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="yHrDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yHrDataSet1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
